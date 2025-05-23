@@ -1,0 +1,60 @@
+{% extends 'storeapp/base.html' %} 
+{% block content %}
+
+<style>
+    body {
+        background-color: #e7bc91;
+        height:1000px;
+    
+      }
+    #container{
+        width: 30%;
+        background-color: #66584c;
+        height: auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: ;
+    }
+</style>
+<br>
+<style>
+  .VIpgJd-ZVi9od-ORHb-OEVmcd{
+      display: none;
+   }
+</style>
+  <div id="google_translate_element" hidden></div>
+  <script type="text/javascript">
+      function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          defaultLanguage:'en',
+          includedLanguages:'en,ar',
+          layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false, 
+          multilanguagepage:true
+      },'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class = 'container' id = 'container'>
+<h3>Update Info</h3>
+<br>
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <label> <strong>  {{field.label}}: </strong> </label>
+        {{field}}
+        <br>
+        {% endfor %}
+        <button type="submit" class = "btn btn-primary" style = "width:100%">Update</button>
+    </form>
+</div>
+<script>
+    let inputs = document.getElementsByTagName('input')
+  for(let i = 0; i<inputs.length; i++){
+    inputs[i].classList.add('form-control')
+  }
+  
+</script>
+
+{% endblock %}

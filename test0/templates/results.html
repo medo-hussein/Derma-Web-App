@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+{% load static %}  
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Services/Diagnose/results/CSS/res.css' %}">
+    <link rel="stylesheet" href="{% static 'Services/Diagnose/results/CSS/all.css' %}">
+    <style>
+        .VIpgJd-ZVi9od-ORHb-OEVmcd{
+            display: none;
+         }
+    </style>
+        <div id="google_translate_element" hidden></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                defaultLanguage:'en',
+                includedLanguages:'en,ar',
+                layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false, 
+                multilanguagepage:true
+            },'google_translate_element');
+            }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+</head>
+
+<body>
+    
+    <section>
+        <div class="results-container">
+
+            <div class="div-logo">
+                <img src="{% static  'website-Images/Derma6.png' %}" alt="">
+            </div>
+
+            <div class="main-chart">
+                <canvas id="doughnut" width="300" height="300"></canvas>
+            </div>
+            <div class="results">
+
+                <div class="result1" id="result-one">
+                    <div class="rel-chart">
+                        <div class="outer">
+                            <div class="inner">
+                                <div id="percentage1"></div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <circle cx="38" cy="38" r="32" stroke-linecap="round" class="circle1"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="btn-res1">
+                        <div class="res1-info">
+                            <h4 class="res-name">
+                                <div id="d_name1"></div>
+                            </h4>
+                            <span class="some-info">Some Info</span>
+                            <span class="res-description">Description</span>
+                        </div>
+                        <div class="div-arrow">
+                            <i class="fas fa-chevron-right "></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="result2" id="result-two">
+                    <div class="rel-chart">
+                        <div class="outer">
+                            <div class="inner">
+                                <div id="percentage2"></div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <circle cx="38" cy="38" r="32" stroke-linecap="round" class="circle2"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="btn-res2">
+                        <div class="res2-info">
+                            <h4 class="res-name">
+                                <div id="d_name2"></div>
+                            </h4>
+                            <span class="some-info">Some Info</span>
+                            <span class="res-description">Description</span>
+                        </div>
+                        <div class="div-arrow">
+                            <i class="fas fa-chevron-right "></i>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="result3" id="result-three">
+                    <div class="rel-chart">
+                        <div class="outer">
+                            <div class="inner">
+                                <div id="percentage3"></div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <circle cx="38" cy="38" r="32" stroke-linecap="round" class="circle3"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="btn-res3">
+                        <div class="res3-info">
+                            <h4 class="res-name">
+                                <div id="d_name3"></div>
+                            </h4>
+                            <span class="some-info">Some Info</span>
+                            <span class="res-description">Description</span>
+                        </div>
+                        <div class="div-arrow">
+                            <i class="fas fa-chevron-right "></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="result4" id="result-four">
+                    <div class="rel-chart">
+                        <div class="outer">
+                            <div class="inner">
+                                <div id="percentage4"></div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <circle cx="38" cy="38" r="32" stroke-linecap="round" class="circle4"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="btn-res4">
+                        <div class="res4-info">
+                            <h4 class="res-name"><div id="d_name4"></div></h4>
+                            <span class="some-info">Some Info</span>
+                            <span class="res-description">Description</span>
+                        </div>
+                        <div class="div-arrow">
+                            <i class="fas fa-chevron-right "></i>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="/t1" class="btn-new-check"><button class="new-check">New Check</button></a>
+            </div>
+
+            <!-- --------------------------------------------------------- -->
+
+            {% for key,value in  discript  %}
+            <div class="row ">
+                <div class="popup-res1" id="pop-success">
+                    <div class="disease-img">
+                        <img src="{% static 'Services/Diagnose/results/acne.jpg' %}" alt="">
+                    </div>
+
+
+                    <div class="description">
+                        <h2 class="disease-name">
+                            <div id="name1"></div>
+                        </h2>
+                        <p class="des-info"> {{value}}
+                        </p>
+                        
+                    </div>
+                    <div class="submit-btn">
+                        <button id="ok-btn1">OK</button>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+
+            <div class="row ">
+                <div class="popup-res2" id="pop-success">
+                    <div class="disease-img">
+                        <img src="{% static 'Services/Diagnose/results/vasculitis.jpg' %}" alt="">
+                    </div>
+
+
+                    <div class="description">
+                        <h2 class="disease-name">
+                            <div id="name2"></div>
+                        </h2>
+                        <p class="des-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rem qui iure officia pariatur perferendis optio culpa praesentium rerum, molestias veniam aspernatur cum quos illo sapiente quam omnis ab corrupti dolores dicta
+                            eaque aut reprehenderit quidem. Quod amet eaque recusandae iusto mollitia quasi nam placeat aliquam unde cum molestiae modi veniam pariatur odio facilis error, dolores numquam sunt velit maiores illo iste debitis harum repellat.
+                            Sunt illo, in doloremque, commodi alias id autem veniam unde facilis error ipsa quo dolorem! Harum quas hic porro architecto voluptatum corrupti minima. Id distinctio quos sint atque. Architecto officiis odio, maiores ex dolorum
+                            cupiditate?
+                        </p>
+                        <h4 class="sugg-treatment">Suggested Treatments</h4>
+                        <p class="sugg-treatments-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, rem? Quibusdam alias sapiente libero provident enim, eligendi natus vero ipsam reiciendis quas repellat labore maiores consequatur in neque hic. Hic possimus voluptatem
+                            beatae quasi modi asperiores iste odio porro, suscipit laboriosam, omnis debitis consequuntur maxime! Cumque eius ratione accusantium recusandae.</p>
+
+                    </div>
+                    <div class="submit-btn">
+                        <button id="ok-btn2">OK</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row ">
+                <div class="popup-res3" id="pop-success">
+                    <div class="disease-img">
+                        <img src="{% static 'Services/Diagnose/results/acne.jpg' %}" alt="">
+                    </div>
+
+
+                    <div class="description">
+                        <h2 class="disease-name">
+                            <div id="name3"></div>
+                        </h2>
+                        <p class="des-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rem qui iure officia pariatur perferendis optio culpa praesentium rerum, molestias veniam aspernatur cum quos illo sapiente quam omnis ab corrupti dolores dicta
+                            eaque aut reprehenderit quidem. Quod amet eaque recusandae iusto mollitia quasi nam placeat aliquam unde cum molestiae modi veniam pariatur odio facilis error, dolores numquam sunt velit maiores illo iste debitis harum repellat.
+                            Sunt illo, in doloremque, commodi alias id autem veniam unde facilis error ipsa quo dolorem! Harum quas hic porro architecto voluptatum corrupti minima. Id distinctio quos sint atque. Architecto officiis odio, maiores ex dolorum
+                            cupiditate?
+                        </p>
+                        <h4 class="sugg-treatment">Suggested Treatments</h4>
+                        <p class="sugg-treatments-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, rem? Quibusdam alias sapiente libero provident enim, eligendi natus vero ipsam reiciendis quas repellat labore maiores consequatur in neque hic. Hic possimus voluptatem
+                            beatae quasi modi asperiores iste odio porro, suscipit laboriosam, omnis debitis consequuntur maxime! Cumque eius ratione accusantium recusandae.</p>
+
+                    </div>
+                    <div class="submit-btn">
+                        <button id="ok-btn3">OK</button>
+                    </div>
+                </div>
+            </div>
+            {% for key,value in  discript  %}
+            <div class="row ">
+                <div class="popup-res4" id="pop-success">
+                    <div class="disease-img">
+                        <img src="{% static 'Services/Diagnose/results/versicolor.jpg' %}" alt="">
+                    </div>
+
+
+                    <div class="description">
+                        <h2 class="disease-name">
+                            <div id="name4"></div>
+                        </h2>
+                        <p class="des-info">{{value}}
+                        </p>
+                    </div>
+                    <div class="submit-btn">
+                        <button id="ok-btn4">OK</button>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js">
+        
+    </script>
+    <script src="{% static 'Services/Diagnose/results/res.js' %}" data-username="{{dic1 }}"></script>
+    <script>
+        
+        const ctx = document.getElementById('doughnut').getContext('2d');
+        var var1=JSON.parse('{{dic1|escapejs}}')["m"]["data"];
+        console.log('{{dic1|escapejs}}')
+        //probability
+        const doughnut = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [var1[0]['class_name'],var1[1]['class_name'], var1[2]['class_name'],  var1[3]['class_name']],
+                datasets: [{
+                    label: 'Results',
+                    data: [var1[0]['probability'], var1[1]['probability'], var1[2]['probability'], var1[3]['probability']],
+                    backgroundColor: [
+                        'rgba(247, 0, 0, 0.6)',
+                        'rgba(247, 71, 0, 0.6)',
+                        'rgba(247, 183, 0, 0.6)',
+                        'rgba(157, 247, 0, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(247, 0, 0, 0.8)',
+                        'rgba(247, 71, 0, 0.8)',
+                        'rgba(247, 183, 0, 0.8)',
+                        'rgba(157, 247, 0, 0.8)',
+                    ],
+                    borderWidth: 0,
+                    cutout: '80%',
+                    circumference: 180,
+                    rotation: 270
+                }]
+            },
+        });
+    </script>
+    
+</body>
+
+</html>

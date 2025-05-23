@@ -1,0 +1,50 @@
+{% extends 'storeapp/base.html' %}
+{% block content %}
+
+<style>
+  body {
+    background-color: #e7bc91;
+    height:1000px;
+
+  }
+</style>
+<style>
+  .VIpgJd-ZVi9od-ORHb-OEVmcd{
+      display: none;
+   }
+</style>
+  <div id="google_translate_element" hidden></div>
+  <script type="text/javascript">
+      function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          defaultLanguage:'en',
+          includedLanguages:'en,ar',
+          layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false, 
+          multilanguagepage:true
+      },'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class = 'container' style ='width: 50%'>
+    <div class = 'row'>
+        <form method = 'POST'>
+            {% csrf_token %}
+            <div class="col">
+          <input type="email" name = 'email' class="form-control" placeholder="Email Address" aria-label="Email">
+        </div>
+        <br>
+        <div class="col">
+            <input type="password" name = 'password' class="form-control" placeholder="Password" aria-label="Password">
+          </div>
+          <br>
+          <button type="submit" class = 'btn btn-lg btn-info' style="width:100%">Login to your Account</button>
+          <p>Don't have an account</p>
+          <a href =  " {% url 'signup' %} " >Signup Now</a>
+      
+        </form>
+    </div>
+</div>
+
+{% endblock %}

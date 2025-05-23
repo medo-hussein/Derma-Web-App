@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7bc91;
+}
+
+.div-logo {
+    width: 7em;
+    height: 7em;
+    position: relative;
+}
+
+.div-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    color: #873600;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    top: 10px;
+}
+
+.herbal-Sec {
+    margin: 0 auto;
+    /* padding: 2rem 1rem; */
+    position: relative;
+}
+
+.herbal-Sec .title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ab5f14;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    /* font-family: 'Caveat', cursive; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* text-shadow: ; */
+}
+
+.disease-img,
+.disease2-img,
+.disease3-img,
+.disease4-img,
+.disease5-img,
+.disease6-img,
+.disease7-img,
+.disease8-img,
+.disease9-img,
+.disease10-img {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: 2px solid #AF601A;
+    padding: 3px;
+    margin-bottom: 2em;
+    margin-left: 30px;
+}
+
+.disease-img img,
+.disease2-img img,
+.disease3-img img,
+.disease4-img img,
+.disease5-img img,
+.disease6-img img,
+.disease7-img img,
+.disease8-img img,
+.disease9-img img,
+.disease10-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.disease-info .dise-name,
+.dise2-name,
+.dise3-name,
+.dise4-name,
+.dise5-name,
+.dise6-name,
+.dise7-name,
+.dise8-name,
+.dise9-name,
+.dise10-name {
+    position: absolute;
+    top: 230px;
+    left: 135px;
+    font-size: 30px;
+    color: #AF601A;
+}
+
+.article-card {
+    margin-left: 80px;
+    display: grid;
+    grid-template-columns: 400px minmax(600px, 600px);
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .4);
+    background: linear-gradient(20deg, rgba(241, 196, 15, .1), rgba(202, 111, 30, .5));
+    margin-bottom: 30px;
+}
+
+.img-box {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease-in;
+}
+
+.article-card:hover img {
+    transform: scale(1.1);
+}
+
+.article-card:hover .article-title {
+    color: #AF601A;
+}
+
+.article-card .article-content {
+    width: 100wh;
+    padding: 25px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.article-title {
+    font-size: 19px;
+    color: #633208;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.article-text {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dise2-name {
+    top: 670px;
+    left: 135px;
+}
+
+.dise3-name {
+    top: 1085px;
+    left: 135px;
+}
+
+.dise4-name {
+    top: 1480px;
+    left: 135px;
+}
+
+.dise5-name {
+    top: 1900px;
+    left: 135px;
+}
+
+.dise6-name {
+    top: 2645px;
+    left: 135px;
+}
+
+.dise7-name {
+    top: 3045px;
+    left: 135px;
+}
+
+.dise8-name {
+    top: 3460px;
+    left: 135px;
+}
+
+.dise9-name {
+    top: 3850px;
+    left: 135px;
+}
+
+.dise10-name {
+    top: 4190px;
+    left: 135px;
+}
+
+
+/* Responsive */
+
+@media (max-width:768px) {
+    .disease-img {
+        width: 4em;
+        height: 4em;
+    }
+    .disease-info .dise-name {
+        top: 165px;
+        left: 120px;
+        font-size: 25px;
+    }
+    .article-card {
+        grid-template-columns: 1fr;
+        max-width: 294px;
+        overflow: hidden;
+    }
+    .img-box.article-content {
+        border-radius: 0;
+    }
+    .img-box {
+        height: 150px;
+    }
+    .article-content {
+        padding: 30px 28px 20px;
+    }
+    .article-title {
+        font-size: 15px;
+    }
+    .article-text {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+}

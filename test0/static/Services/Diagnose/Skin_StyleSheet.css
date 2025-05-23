@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #AF601A;
+}
+
+body {
+    background-color: #e7bc91;
+}
+
+.swiper {
+    position: relative;
+}
+
+.div-logo {
+    width: 7em;
+    height: 7em;
+    position: relative;
+    cursor: pointer;
+}
+
+.div-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s-logo {
+    color: #873600;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    top: 10px;
+}
+
+.s-title {
+    color: #AF601A;
+    position: absolute;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    top: 50px;
+    left: 25%;
+}
+
+.s-txt {
+    color: #fff;
+    position: absolute;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Caveat', cursive;
+    top: 150px;
+    left: 25%;
+}
+
+.img_header {
+    background-image: url(../skinTypes_imgs/SkinCare1_head.jpg);
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+
+.img_overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 20em;
+    height: 60vh;
+    background-color: #F19F56;
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .5);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px)
+}
+
+.card-img {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 3px solid var(--color);
+    padding: 3px;
+    margin-bottom: 2em;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #873600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 15px;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 15px;
+    margin: 1em 0;
+}
+
+.card-dtn {
+    background-color: #873600;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card-dtn .skin-a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-dtn:hover {
+    background-color: var(--color);
+}

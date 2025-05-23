@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --transition: stroke-dashoffset 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    --white: #ffffff;
+    --circle-bg: rbga(43, 26, 106, 0.218)
+}
+
+body {
+    background-image: url(../../leather.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.div-logo {
+    width: 7em;
+    height: 7em;
+    position: relative;
+    cursor: pointer;
+}
+
+.div-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 4;
+    left: 4;
+}
+
+
+/* -------------------------------------------------- */
+
+.results-container {
+    display: flex;
+    position: relative;
+}
+
+.main-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 430px;
+    height: 50vh;
+    margin-left: 550px;
+    margin-top: 90px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.result1,
+.result2,
+.result3,
+.result4 {
+    background: linear-gradient(45deg, rgba(165, 121, 1, 0.4), rgba(247, 135, 0, 0.5));
+    width: 450px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 510px;
+    margin-left: 435px;
+    cursor: pointer;
+}
+
+.result2,
+.result3,
+.result4 {
+    margin-top: 10px;
+}
+
+.result4 {
+    margin-bottom: 60px;
+}
+
+.btn-res1,
+.btn-res2,
+.btn-res3,
+.btn-res4 {
+    text-decoration: none;
+    margin-right: 110px;
+    margin-top: 7px;
+}
+
+.div-arrow i {
+    position: absolute;
+    margin-left: 140px;
+    font-size: 20px;
+    color: rgba(118, 66, 2, 0.689);
+    margin-top: -35px;
+}
+
+.res-name {
+    font-size: 22px;
+    color: #873600;
+    font-weight: 500;
+}
+
+.some-info {
+    font-size: 15px;
+    color: rgb(218, 211, 211);
+    display: block;
+}
+
+.res-description {
+    color: #953e04;
+}
+
+.new-check {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(20deg, #873600, rgb(221, 94, 0));
+    margin-left: 580px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    color: #682a01;
+}
+
+.rel-chart {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-left: -50px;
+    margin-top: 2px;
+}
+
+.outer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 14px;
+}
+
+.inner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#percentage {
+    font-weight: 600;
+    color: black;
+}
+
+circle {
+    fill: none;
+    stroke-width: 7px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    margin-left: 15px;
+}
+
+.circle1 {
+    stroke: red;
+    animation: cir1 1s linear forwards;
+}
+
+.circle2 {
+    stroke: orangered;
+    animation: cir2 1s linear forwards;
+}
+
+.circle3 {
+    stroke: yellow;
+    animation: cir3 1s linear forwards;
+}
+
+.circle4 {
+    stroke: #00ff44;
+    animation: cir4 1s linear forwards;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes cir1 {
+    100% {
+        stroke-dasharray: 191;
+        stroke-dashoffset: 281;
+    }
+}
+
+@keyframes cir2 {
+    100% {
+        stroke-dasharray: 472;
+        stroke-dashoffset: 410;
+    }
+}
+
+@keyframes cir3 {
+    100% {
+        stroke-dasharray: 472;
+        stroke-dashoffset: 410;
+    }
+}
+
+@keyframes cir4 {
+    100% {
+        stroke-dasharray: 472;
+        stroke-dashoffset: 430;
+    }
+}
+
+
+/* --------------------------------------- */
+
+
+/* popup page */
+
+.results-container {
+    position: relative;
+}
+
+.popup-res1,
+.popup-res2,
+.popup-res3,
+.popup-res4 {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.popup-res1,
+.popup-res2,
+.popup-res3,
+.popup-res4 {
+    width: 550px;
+    padding: 30px 20px;
+    background: linear-gradient(0deg, rgb(225, 185, 121), rgb(232, 143, 66));
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    opacity: 0;
+}
+
+.popup-res1.active,
+.popup-res2.active,
+.popup-res3.active,
+.popup-res4.active {
+    opacity: 1;
+    top: 40%;
+    left: 800px;
+}
+
+.description {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.description::-webkit-scrollbar {
+    width: 0px;
+}
+
+.disease-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #873600;
+}
+
+.disease-name {
+    font-weight: 600;
+    color: #c6620b;
+}
+
+.des-info,
+.sugg-treatments-info {
+    margin: 20px 0;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.sugg-treatment {
+    color: #652800;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#ok-btn1,
+#ok-btn2,
+#ok-btn3,
+#ok-btn4 {
+    width: 90px;
+    height: 40px;
+    padding: 10px 20px;
+    background: #c6620b;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (max-width:767px) {
+    .main-chart {
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 50vh;
+        margin-left: 150px;
+    }
+}

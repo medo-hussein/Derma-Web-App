@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Services/Diagnose/Skin_StyleSheet.css' %}">
+    <style>
+        .VIpgJd-ZVi9od-ORHb-OEVmcd{
+            display: none;
+         }
+    </style>
+        <div id="google_translate_element" hidden></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                defaultLanguage:'en',
+                includedLanguages:'en,ar',
+                layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false, 
+                multilanguagepage:true
+            },'google_translate_element');
+            }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+
+</head>
+
+<body>
+    <section class="swiper mySwiper">
+
+        <div class="img_header">
+
+            <div class="img_overlay">
+                <!-- <span class="s-logo">Derma</span> -->
+                <div class="div-logo">
+                    <img src="{% static 'website-Images/Derma6.png' %}" alt="">
+                </div>
+                <span class="s-title animate__animated animate__slideInDown">SKIN TYPES</span>
+                <span class="s-txt animate__animated animate__zoomIn" style="animation-delay: .2s" ;>Choose Which Products is siutable<br> for your Skin type</span></div>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="card-img">
+                    <img src="{% static 'website-Images/SC_Dry1.jpg' %}" alt="">
+                </div>
+                <div class="card_content">
+                    <span class="card-title">Dry Skin</span>
+                    <p class="card-text">
+                        Dry skin generally produces less natural oils than other types of skin. This may cause it to appear dull and become rough, flaky, or even scaly. It often feels tight or less elastic, noticeably dehydrated, and may be prone to showing more visible fine
+                        lines. In addition, it may become itchy or irritated.</p>
+                    <button class="card-dtn"><a class="skin-a" href="{% url 'dry' %}">View More</a ></button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="card-img">
+                    <img src="{% static 'website-Images/oily.jpg' %}" alt="">
+                </div>
+                <div class="card_content">
+                    <span class="card-title">Oily Skin</span>
+                    <p class="card-text">Oily skin produces an excess of sebum that causes the skin to appear shiny and feel greasy especially throughout the T-zone (forehead,nose,and chin). People with oily skin be more prone to enlarged pores,acne blemishes,black and whiteheads.</p>
+                    <button class="card-dtn"><a class="skin-a" href="{% url 'oily' %}">View More</a ></button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="card-img">
+                    <img src="{% static 'website-Images/mixedskin.jpg' %}" alt="">
+                </div>
+                <div class="card_content">
+                    <span class="card-title">Combination Skin</span>
+                    <p class="card-text">Combination skin includes areas that are dry as well as oily—with the T-zone commonly being oily, and the cheeks being either dry or normal. This skin type can vary during different seasons of the year, and due to various factors,
+                        such as stress or hormone fluctuation.</p>
+                    <button class="card-dtn"><a class="skin-a" href="{% url 'mix' %}">View More</a ></button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="card-img">
+                    <img src="{% static 'website-Images/SC_Normal1.jpg' %}" alt="">
+                </div>
+                <div class="card_content">
+                    <span class="card-title">Normal Skin</span>
+                    <p class="card-text">Normal skin is balanced feeling neither too dry nor too oily. It is not prone to breakouts, flakiness, or feeling greasy or tight.</p>
+                    <button class="card-dtn"><a class="skin-a" href="{% url 'normal' %}">View More</a ></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
