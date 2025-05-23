@@ -25,12 +25,6 @@
 
 ---
 
-## 🖼️ Example Images
-
-> Add sample images or a demo GIF here if available.
-
----
-
 ## 🚀 Installation
 
 1. **Clone the repository**
